@@ -1,4 +1,4 @@
-"""Django REST Framework view to retrieve all Flipt flags"""
+"""Django REST Framework views"""
 from flipt_pb2 import ListFlagRequest
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -8,9 +8,10 @@ from flipt.clients import client
 
 
 class FeatureFlagListView(APIView):
+    """View to retrieve all Flipt flags"""
     permission_classes = (AllowAny,)
 
-    def get(self, request):
+    def get(self, _):
         response = client.ListFlags(ListFlagRequest())
 
         results = {}

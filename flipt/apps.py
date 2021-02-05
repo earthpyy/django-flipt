@@ -1,3 +1,4 @@
+"""Flipt Django application"""
 from django.apps import AppConfig
 
 

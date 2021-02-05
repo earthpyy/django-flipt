@@ -17,11 +17,11 @@ def featureflag(parser, token):
     parser.delete_first_token()
 
     try:
-        tag_name, params = token.split_contents()
+        _, params = token.split_contents()
     except ValueError:
         raise template.TemplateSyntaxError(
-            "%r tag requires one or two arguments" % token.contents.split()[0]
-        )
+            '%r tag requires one or two arguments' % token.contents.split()[0]
+        ) from ValueError
 
     params = params.split()
     flag_key = str(params[0]).rstrip('"').lstrip('"')

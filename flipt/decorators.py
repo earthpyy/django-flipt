@@ -8,6 +8,7 @@ from django.test import override_settings
 from flipt.flags import flag_enabled
 
 
+# pylint: disable=invalid-name
 class override_flags(override_settings):
     def __init__(self, flags: Dict[str, bool]):
         flags_setting = {}

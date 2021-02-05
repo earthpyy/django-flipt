@@ -5,9 +5,18 @@ from flipt.decorators import flag_check
 
 
 class FlaggedRouter(DefaultRouter):
+    """
+    Usage:
+
+    router = FlaggedRouter()
+    router.register('test', TestViewSet, flag_key='flag_key', flag_state=True)
+
+    * `flag_state` is not required
+    """
     flagged_infos = {}
 
-    def register(self, prefix, viewset, basename=None, flag_key: str = None, flag_state=True):
+    def register(self, prefix, viewset, basename=None, flag_key: str = None,
+                 flag_state=True):
         super().register(prefix, viewset, basename=basename)
 
         if flag_key:
