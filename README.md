@@ -1,11 +1,21 @@
 # django-flipt
 Flipt Integration for Django and Django REST Framework
 
-# Requirements
+## Installation
+
+```shell
+pip install django-flipt
+```
+
+## Usage
+
+_TBD_
+
+## Development
+
+### Requirements
 
 - Docker
-
-# Development
 
 ### Run Project
 
