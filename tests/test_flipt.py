@@ -1,6 +1,10 @@
 """Testing Flipt-related information"""
-from flipt import __version__
 
 
 def test_version():
-    assert __version__ == '0.1.0'
+    try:
+        from flipt import __version__
+    except ImportError:
+        __version__ = None
+
+    assert __version__ is not None
