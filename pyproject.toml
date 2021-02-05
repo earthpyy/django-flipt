@@ -4,6 +4,12 @@ version = "0.1.0"
 description = "Flipt Integration for Django and Django REST Framework"
 authors = ["Preeti Yuankrathok <preetisatit@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/earthpyy/django-flipt"
+keywords = ["flipt", "django", "django-rest-framework", "feature-flag", "feature-toggle"]
+packages = [
+    { include = "flipt" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
