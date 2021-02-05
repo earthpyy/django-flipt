@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  django:
+    image: django-flipt
+    build: .
+    volumes:
+      - .:/opt/flipt
+    command: sh -c "poetry install && tail -f /dev/null"
