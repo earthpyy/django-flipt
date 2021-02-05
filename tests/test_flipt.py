@@ -1,3 +1,4 @@
+"""Testing Flipt-related information"""
 from flipt import __version__
 
 
