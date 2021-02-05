@@ -2,7 +2,7 @@ start:
 	docker-compose up -d django
 
 lint:
-	docker-compose exec django pylint flipt tests
+	docker-compose exec django pylint flipt
 
 test:
 	docker-compose exec django pytest
