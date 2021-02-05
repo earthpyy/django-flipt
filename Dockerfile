@@ -13,8 +13,8 @@ WORKDIR $PROJECT_ROOT
 
 # Copying dependencies
 COPY ./pyproject.toml .
-#COPY ./poetry.lock .
-RUN poetry install
+COPY ./poetry.lock .
+RUN poetry install -E rest
 
 # Copying source files
 COPY . .

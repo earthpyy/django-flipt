@@ -6,4 +6,4 @@ services:
     build: .
     volumes:
       - .:/opt/flipt
-    command: sh -c "poetry install && tail -f /dev/null"
+    command: sh -c "poetry install -E rest && tail -f /dev/null"
