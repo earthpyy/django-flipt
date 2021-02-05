@@ -11,6 +11,8 @@ django = "^3.0.0"
 flipt-grpc-python = {url = "https://pip.c0d1um.io/packages/flipt-grpc-python-0.1.0.tar.gz"}
 
 [tool.poetry.dev-dependencies]
+icecream = "^2.1.0"
+ipdb = "^0.13.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
