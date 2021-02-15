@@ -7,9 +7,10 @@ from flipt.clients import client
 
 
 def flag_enabled(flag_key: str, user=None) -> bool:
-    override_value = settings.FLAG_OVERRIDDEN.get(flag_key)
-    if override_value is not None:
-        return bool(override_value)
+    if hasattr(settings, 'FLAG_OVERRIDDEN'):
+        override_value = settings.FLAG_OVERRIDDEN.get(flag_key)
+        if override_value is not None:
+            return bool(override_value)
 
     request = EvaluationRequest(
         flag_key=flag_key,
