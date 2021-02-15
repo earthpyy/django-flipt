@@ -1,4 +1,5 @@
 """Django REST Framework views"""
+from django.conf import settings
 from flipt_pb2 import ListFlagRequest
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -12,6 +13,10 @@ class FeatureFlagListView(APIView):
     permission_classes = (AllowAny,)
 
     def get(self, _):
+        if client is None:
+            default = getattr(settings, 'FLAG_DEFAULT', True)
+            return Response({'_default': default})
+
         response = client.ListFlags(ListFlagRequest())
 
         results = {}

@@ -12,6 +12,9 @@ def flag_enabled(flag_key: str, user=None) -> bool:
         if override_value is not None:
             return bool(override_value)
 
+    if client is None:
+        return getattr(settings, 'FLAG_DEFAULT', True)
+
     request = EvaluationRequest(
         flag_key=flag_key,
         entity_id=user.username if user and user.username else '_'
