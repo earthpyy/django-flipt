@@ -64,3 +64,8 @@ $ make
 $ make lint
 $ make test
 ```
+
+## Credits
+
+- [Flipt](https://flipt.io)
+- Inspired by [django-flags](https://github.com/cfpb/django-flags)
