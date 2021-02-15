@@ -1,5 +1,15 @@
 # django-flipt
-Flipt Integration for Django and Django REST Framework
+
+<p>
+<img src="https://img.shields.io/pypi/v/django-flipt">
+<img src="https://img.shields.io/pypi/l/django-flipt">
+<img src="https://img.shields.io/pypi/pyversions/django-flipt">
+<img src="https://img.shields.io/pypi/dm/django-flipt">
+<img src="https://img.shields.io/github/workflow/status/earthpyy/django-flipt/CI/main">
+<img src="https://img.shields.io/github/workflow/status/earthpyy/django-flipt/CodeQL/main?label=CodeQL">
+</p>
+
+<p>Flipt Integration for Django and Django REST Framework</p>
 
 ## Installation
 
