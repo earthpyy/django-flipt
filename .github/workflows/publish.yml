@@ -1,0 +1,29 @@
+name: Build & Publish to PyPi
+
+on:
+  push:
+    tags: [ v* ]
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.6
+    - name: Install and configure Poetry
+      uses: snok/install-poetry@v1.1.1
+      with:
+        virtualenvs-create: false
+    - name: Install dependencies
+      run: |
+        poetry install
+    - name: Build and publish package
+      env:
+        POETRY_PYPI_TOKEN_PYPI: ${{ PYPI_TOKEN }}
+      run: |
+        poetry publish --build
