@@ -128,8 +128,8 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "flipt-grpc-python3"
-version = "0.1.0"
+name = "flipt-grpc-python"
+version = "0.2.0"
 description = ""
 category = "main"
 optional = false
@@ -555,7 +555,7 @@ rest = ["djangorestframework"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "54e3c5338f6293cfe6f393110a9954425e07283c63eec094cb9d4eb7afa4291e"
+content-hash = "cdfe18a9bb9827759f58757426533d4f8c65828d33f8805d16b4025161c74195"
 
 [metadata.files]
 appnope = [
@@ -606,9 +606,9 @@ executing = [
     {file = "executing-0.5.4-py3-none-any.whl", hash = "sha256:b96545c606c410e2b8500ef6e3f548d8678e1cb7a561dbcf46e16c19eed10c4e"},
     {file = "executing-0.5.4.tar.gz", hash = "sha256:07b71adef0399e8579fa0165db5e5f8e9dd961fa66572664de95c838879768eb"},
 ]
-flipt-grpc-python3 = [
-    {file = "flipt-grpc-python3-0.1.0.tar.gz", hash = "sha256:41acca842eb04258f4b43d64d514b2466975b4f59d7cee3c1191aed704934abf"},
-    {file = "flipt_grpc_python3-0.1.0-py2.py3-none-any.whl", hash = "sha256:30d15b6de69d851f407206d1750eb8212eadcd9246c05d00e5fbf572197fc181"},
+flipt-grpc-python = [
+    {file = "flipt-grpc-python-0.2.0.tar.gz", hash = "sha256:b86e93ccc823baf4246620024fedc2b1938e0f00265100b493f0cc0a0953f751"},
+    {file = "flipt_grpc_python-0.2.0-py2.py3-none-any.whl", hash = "sha256:212da0f916abf97c8648d702dad3161027d52f44da3923862e8275b74ee0fcae"},
 ]
 grpcio = [
     {file = "grpcio-1.35.0-cp27-cp27m-macosx_10_10_x86_64.whl", hash = "sha256:95cc4d2067deced18dc807442cf8062a93389a86abf8d40741120054389d3f29"},

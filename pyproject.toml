@@ -14,8 +14,8 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.6"
 django = "^3.0.0"
-flipt-grpc-python3 = "^0.1.0"
 djangorestframework = { version = "^3.12.2", optional = true }
+flipt-grpc-python = "^0.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
