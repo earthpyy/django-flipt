@@ -41,7 +41,7 @@ FLIPT_GRPC_HOST = 'flipt:9000'
 You can override any flag by defining your flag key and overriding value
 
 ```python
-FLAG_OVERRIDDEN = {
+FLIPT_FLAG_OVERRIDDEN = {
     'some-flag-key': True
 }
 ```

@@ -10,10 +10,7 @@ from rest_framework.views import APIView
 from flipt.clients import client
 
 
-try:
-    CACHE_SECONDS = settings.CACHE_SECONDS
-except AttributeError:
-    CACHE_SECONDS = 0
+CACHE_SECONDS = getattr(settings, 'FLIPT_CACHE_SECONDS', 0)
 
 
 class FeatureFlagListView(APIView):
@@ -23,7 +20,7 @@ class FeatureFlagListView(APIView):
     @method_decorator(cache_page(CACHE_SECONDS))
     def get(self, _):
         if client is None:
-            default = getattr(settings, 'FLAG_DEFAULT', True)
+            default = getattr(settings, 'FLIPT_FLAG_DEFAULT', True)
             return Response({'_default': default})
 
         response = client.ListFlags(ListFlagRequest())

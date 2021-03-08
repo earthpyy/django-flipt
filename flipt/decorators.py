@@ -17,7 +17,7 @@ class override_flags(override_settings):
             if isinstance(value, bool):
                 flags_setting[flag_key] = value
 
-        super().__init__(FLAG_OVERRIDDEN=flags_setting)
+        super().__init__(FLIPT_FLAG_OVERRIDDEN=flags_setting)
 
 
 def flag_check(flag_key: str, state=True):
