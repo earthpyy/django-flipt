@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-flipt"
-version = "0.2.1"
+version = "0.2.2"
 description = "Flipt Integration for Django and Django REST Framework"
 authors = ["Preeti Yuankrathok <preetisatit@gmail.com>"]
 license = "MIT"
