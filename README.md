@@ -55,6 +55,8 @@ FLIPT_FLAG_OVERRIDDEN = {
 - `@override_flags`
 - `{% featureflag %} ... {% endfeatureflag %}`
 - `FeatureFlagListView`
+- `flagged_path`
+- `flagged_re_path`
 
 ## Development
 
