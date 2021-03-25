@@ -1,3 +1,4 @@
+"""Path implementation for Django REST"""
 from functools import partial
 
 from django.urls import URLPattern
@@ -6,6 +7,7 @@ from flipt.flags import flag_enabled
 
 
 class FlaggedURLResolver(URLResolver):
+    """URLResolver with feature flag implementation"""
     def __init__(self, *args, flag_key: str = None, flag_state=True, **kwargs):
         super().__init__(*args, **kwargs)
         self.flag_key = flag_key
@@ -21,6 +23,7 @@ class FlaggedURLResolver(URLResolver):
 
 
 class FlaggedURLPattern(URLPattern):
+    """URLPattern with feature flag implementation"""
     def __init__(self, *args, flag_key: str = None, flag_state=True, **kwargs):
         super().__init__(*args, **kwargs)
         self.flag_key = flag_key
@@ -35,7 +38,15 @@ class FlaggedURLPattern(URLPattern):
             return super().resolve(path)
 
 
-def _flagged_path(route, view, kwargs=None, name=None, flag_key: str = None, flag_state=True, Pattern=None):
+def _flagged_path(
+    route,
+    view,
+    kwargs=None,
+    name=None,
+    flag_key: str = None,
+    flag_state=True,
+    Pattern=None,  # pylint: disable=invalid-name
+):
     if isinstance(view, (list, tuple)):
         # For include(...) processing.
         pattern = Pattern(route, is_endpoint=False)
