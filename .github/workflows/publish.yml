@@ -27,3 +27,5 @@ jobs:
         POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
       run: |
         poetry publish --build
+    - name: Create GitHub release
+      uses: ncipollo/release-action@v1
