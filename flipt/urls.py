@@ -45,7 +45,8 @@ def _flagged_path(
     name=None,
     flag_key: str = None,
     flag_state=True,
-    Pattern=None,  # pylint: disable=invalid-name
+    # pylint: disable=invalid-name
+    Pattern=None,
 ):
     if isinstance(view, (list, tuple)):
         # For include(...) processing.
@@ -71,7 +72,9 @@ def _flagged_path(
             flag_state=flag_state,
         )
     else:
-        raise TypeError('view must be a callable or a list/tuple in the case of include().')
+        raise TypeError(
+            'view must be a callable or a list/tuple in the case of include().'
+        )
 
 
 flagged_path = partial(_flagged_path, Pattern=RoutePattern)
