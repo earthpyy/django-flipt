@@ -20,7 +20,7 @@ def featureflag(parser, token):
         _, params = token.split_contents()
     except ValueError:
         raise template.TemplateSyntaxError(
-            '%r tag requires one or two arguments' % token.contents.split()[0]
+            f'{token.contents.split()[0]} tag requires one or two arguments'
         ) from ValueError
 
     params = params.split()
